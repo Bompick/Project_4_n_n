@@ -17,5 +17,8 @@ class BasePage():
         except (NoSuchElementException):
             return False
         return True
+
+    def go_to_element (self, how, what):
+        self.browser.find_element(how,what).click()
     
     
