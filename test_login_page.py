@@ -8,6 +8,7 @@ def test_login_page_full(browser):
     login_page = LoginPage(browser, url)
     login_page.open()
     login_page.should_be_login_page()
+    
 
     
     
