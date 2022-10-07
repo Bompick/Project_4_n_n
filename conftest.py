@@ -15,3 +15,4 @@ def browser (request):
     yield browser
     time.sleep(3)
     browser.quit()
+    
