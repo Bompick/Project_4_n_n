@@ -9,9 +9,11 @@ import pytest
                                   "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer4",
                                   "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer5",
                                   "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer6",
-                                  "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer7",
+                                  pytest.param
+                                  ("http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer7", marks=pytest.mark.xfail),
                                   "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer8",
                                   "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer9"])
+
 def test_1(browser,link):
     url = f"{link}"
     product_page = ProductPage(browser, url)# initialitiation of of object belonging to class ProductPage
@@ -20,6 +22,7 @@ def test_1(browser,link):
     product_page.solve_quiz_and_get_code()
     product_page.should_be_add_to_basket_message()
     product_page.should_be_price_message()
-   
+
+
 
 
