@@ -28,7 +28,7 @@ class ProductPage(BasePage):
         assert self.is_element_present(*ProductPageLocators.PRODUCT_NAME_ADDED), "Added Product name is not presented"
         product_name = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME).text
         message_product_name = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME_ADDED).text
-        assert product_name in message_product_name, "No product name in the message"
+        assert product_name == message_product_name, "No product name in the message"
     
     def should_be_price_message(self):
         assert self.is_element_present(*ProductPageLocators.BOOK_PRICE), "Price  is not presented"
