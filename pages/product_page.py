@@ -37,6 +37,13 @@ class ProductPage(BasePage):
         price_value_added = self.browser.find_element(*ProductPageLocators.BOOK_PRICE_ADEED).text
         assert price_value == price_value_added, 'price in basket is not correct'
 
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.PRODUCT_NAME_ADDED), \
+            "Message is presented, but should not be"
 
+    def should_disappear(self):
+        assert self.is_disappeared(*ProductPageLocators.PRODUCT_NAME_ADDED),"Element is still presented, but should not be"
+
+    
 
       
