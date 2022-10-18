@@ -5,5 +5,8 @@ from .login_page import LoginPage
 
 
 class MainPage(BasePage):
+    
+    
+
     def go_to_login_page(self):
         pass 
