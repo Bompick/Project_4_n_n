@@ -6,7 +6,7 @@ from .pages.login_page import LoginPage
 
 
 @pytest.mark.need_review 
-@pytest.mark.parametrize('link', ["http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer0"]) #to show parametrize. 9 from 10 link were deleted for review. 
+@pytest.mark.parametrize('link', ["http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer0"]) #to show parametrize. 9 from 10 links were deleted for review. 
 def test_guest_can_add_product_to_basket(browser,link):
     url = f"{link}"
     product_page = ProductPage(browser, url)

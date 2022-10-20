@@ -1,5 +1,0 @@
-__pycache__
-.pytest_cache
-test_login_page.py
-test_product_page_4_3_6.py
-test_product_page_alt.py
