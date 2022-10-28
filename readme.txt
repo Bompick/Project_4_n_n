@@ -1,0 +1,1 @@
+Final project of the "Test Automation with Selenium and Python"  course.
